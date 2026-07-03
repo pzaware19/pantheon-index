@@ -106,7 +106,7 @@
       d.className = "ecard";
       d.innerHTML =
         `<div class="top"><span class="nm">${p.icon} ${last(p.name)}</span><span class="big" style="color:${SPORT_COLOR[p.sport]}">${p.elegance_index}</span></div>` +
-        `<div class="sub">${p.elegance_hits} aesthetic hits · ${p.elegance_density}/100 density</div>` +
+        `<div class="sub">${p.elegance_hits} beauty-words, about 1 in every ${Math.round(100 / p.elegance_density)} they wrote</div>` +
         `<div class="chips">${chips}</div>`;
       wrap.appendChild(d);
     });

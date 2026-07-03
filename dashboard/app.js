@@ -166,7 +166,7 @@
       d.className = "ecard";
       d.innerHTML =
         `<div class="top"><div class="nm">${p.icon} ${p.name}</div><div class="big">${p.elegance_index}</div></div>` +
-        `<div style="font-size:12px;color:#8ea3bf">${p.elegance_hits} aesthetic hits · ${p.elegance_words} words · ${p.elegance_density}/100 density</div>` +
+        `<div style="font-size:12px;color:#8ea3bf">${p.elegance_hits} beauty-words, about 1 in every ${Math.round(100 / p.elegance_density)} they wrote</div>` +
         `<div class="chips">${chips}</div>`;
       wrap.appendChild(d);
     });
