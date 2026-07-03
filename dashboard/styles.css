@@ -1,0 +1,107 @@
+:root{
+  --bg:#0a0e14; --bg2:#0f1622; --card:#131c2b; --card2:#182437;
+  --line:#243349; --ink:#eaf1fb; --mut:#8ea3bf; --dim:#64748b;
+  --gold:#f4c14b; --gold2:#e0a326; --green:#33d17a; --sky:#4aa8ff;
+  --pink:#ff5d8f; --cric:#33d17a; --foot:#4aa8ff; --tenn:#f4c14b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(1200px 700px at 70% -10%,#16233a 0%,var(--bg) 55%);
+  color:var(--ink); line-height:1.55; -webkit-font-smoothing:antialiased;
+}
+#stars-bg{position:fixed;inset:0;z-index:-1;
+  background-image:radial-gradient(1px 1px at 20% 30%,#ffffff22 50%,transparent),
+    radial-gradient(1px 1px at 80% 20%,#ffffff18 50%,transparent),
+    radial-gradient(1px 1px at 50% 70%,#ffffff14 50%,transparent),
+    radial-gradient(1px 1px at 35% 85%,#ffffff10 50%,transparent);}
+
+/* hero */
+.hero{max-width:960px;margin:0 auto;padding:70px 24px 30px;text-align:center}
+.hero-tag{font-size:12px;letter-spacing:.28em;color:var(--gold);font-weight:600;margin-bottom:18px}
+.hero h1{font-size:clamp(38px,7vw,76px);font-weight:900;letter-spacing:-.02em;line-height:1}
+.grad{background:linear-gradient(90deg,var(--green),var(--sky) 45%,var(--gold));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{max-width:720px;margin:22px auto 0;color:var(--mut);font-size:17px}
+.hero-sub b{color:var(--ink)}
+.hero-axes{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:26px}
+.hero-axes>div{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:10px 16px;font-size:13px;color:var(--ink)}
+.hero-axes em{color:var(--mut);font-style:normal}
+.axk{display:inline-block;font-weight:700;color:var(--gold);margin-right:6px}
+
+/* layout */
+main{max-width:1080px;margin:0 auto;padding:20px 24px 60px}
+.panel{background:linear-gradient(180deg,var(--card),var(--bg2));
+  border:1px solid var(--line);border-radius:18px;padding:28px;margin:22px 0;
+  box-shadow:0 20px 50px -30px #000}
+.panel h2{font-size:24px;font-weight:800;letter-spacing:-.01em}
+.lead{color:var(--mut);margin-top:6px;max-width:760px;font-size:15px}
+.lead b{color:var(--ink)} .lead i{color:var(--gold);font-style:normal}
+
+/* podium */
+.podium{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.pod{background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.pod .rk{position:absolute;top:10px;right:14px;font-size:34px;font-weight:900;color:#ffffff10}
+.pod .ic{font-size:40px}
+.pod .nm{font-weight:800;font-size:18px;margin-top:4px}
+.pod .sp{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.12em}
+.pod .sc{font-size:40px;font-weight:900;margin-top:10px;letter-spacing:-.02em}
+.pod .bd{display:flex;gap:8px;justify-content:center;margin-top:12px;font-size:12px}
+.pod .bd span{background:#0c1420;border:1px solid var(--line);border-radius:20px;padding:4px 10px}
+.pod.cricket{box-shadow:inset 0 3px 0 var(--cric)}
+.pod.football{box-shadow:inset 0 3px 0 var(--foot)}
+.pod.tennis{box-shadow:inset 0 3px 0 var(--tenn)}
+
+/* plane */
+.plane-wrap{margin-top:18px;overflow-x:auto}
+svg{display:block;max-width:100%}
+.dot-lab{font-size:11px;fill:var(--mut)}
+.star-lab{font-size:13px;font-weight:800}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.pcard{background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:18px}
+.pcard .hd{display:flex;align-items:center;gap:10px}
+.pcard .hd .ic{font-size:30px}
+.pcard .hd .nm{font-weight:800;font-size:17px}
+.pcard .hd .sp{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.12em}
+.pcard .stat{display:flex;justify-content:space-between;font-size:13px;color:var(--mut);margin-top:14px}
+.pcard .stat b{color:var(--ink);font-size:15px}
+
+/* peers */
+.peers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.peercol{background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:16px}
+.peercol h3{font-size:14px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);margin-bottom:12px}
+.prow{display:flex;align-items:center;gap:8px;margin:7px 0;font-size:13px}
+.prow .nm{width:120px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--mut)}
+.prow.hero-row .nm{color:var(--ink);font-weight:800}
+.bar{flex:1;height:9px;background:#0b1220;border-radius:6px;overflow:hidden}
+.bar>i{display:block;height:100%;border-radius:6px;background:#33445c}
+.prow.hero-row .bar>i{background:linear-gradient(90deg,var(--gold2),var(--gold))}
+.prow .zv{width:44px;text-align:right;color:var(--mut);font-variant-numeric:tabular-nums}
+
+/* elegance */
+.elegance{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.ecard{background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:18px}
+.ecard .top{display:flex;justify-content:space-between;align-items:baseline}
+.ecard .big{font-size:44px;font-weight:900;letter-spacing:-.03em;color:var(--gold)}
+.ecard .top .nm{font-weight:800}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chip{background:#0c1420;border:1px solid var(--line);border-radius:20px;padding:4px 10px;font-size:12px;color:var(--ink)}
+.chip b{color:var(--gold)}
+.quote{margin-top:14px;font-size:13px;color:var(--mut);font-style:italic;border-left:2px solid var(--gold2);padding-left:10px}
+
+/* method */
+.method #method{margin-top:14px;color:var(--mut);font-size:14px}
+.method h4{color:var(--ink);margin:16px 0 6px;font-size:15px}
+.method code{background:#0c1420;border:1px solid var(--line);border-radius:6px;padding:1px 6px;color:var(--gold);font-size:13px}
+.method ul{margin:6px 0 6px 20px} .method li{margin:4px 0}
+.honest{background:#1a1206;border:1px solid #3a2c0e;border-radius:12px;padding:14px 16px;margin-top:16px;color:#e9d9b0;font-size:13.5px}
+
+footer{max-width:1080px;margin:0 auto;padding:20px 24px 60px;font-size:12px;text-align:center;color:#64748b}
+footer p{color:#64748b}
+
+@media(max-width:820px){
+  .podium,.cards,.peers,.elegance{grid-template-columns:1fr}
+}

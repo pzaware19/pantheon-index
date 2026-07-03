@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Pantheon Index — Tendulkar × Messi × Federer</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="stars-bg"></div>
+
+<header class="hero">
+  <div class="hero-tag">FIFA WORLD CUP 2026 · A CROSS-SPORT EXPERIMENT</div>
+  <h1>THE <span class="grad">PANTHEON</span> INDEX</h1>
+  <p class="hero-sub">
+    When you picture greatness married to grace, three names arrive unbidden:
+    <b>Tendulkar</b> in cricket, <b>Messi</b> in football, <b>Federer</b> in tennis.
+    Different sports, different units — one question. Can the sublime be measured?
+  </p>
+  <div class="hero-axes">
+    <div><span class="axk">Axis 1</span> Standardized Dominance <em>— how far above their era's peers</em></div>
+    <div><span class="axk">Axis 2</span> Aesthetic Elegance <em>— how the world wrote about them</em></div>
+  </div>
+</header>
+
+<main>
+  <!-- ranking strip -->
+  <section class="panel">
+    <h2>The Pantheon, ranked</h2>
+    <p class="lead">A balanced blend of the two constructed axes. All three sit <b>#1 in their own sport</b> — the separation lives in the details.</p>
+    <div id="podium" class="podium"></div>
+  </section>
+
+  <!-- the plane -->
+  <section class="panel">
+    <h2>The Greatness × Elegance plane</h2>
+    <p class="lead">Every athlete is a point. Rightward = more dominant over peers. Upward = more elegant in the writing about them. The trio lives in the rare top-right.</p>
+    <div id="plane" class="plane-wrap"></div>
+  </section>
+
+  <!-- three cards with radar -->
+  <section class="panel">
+    <h2>Anatomy of each genius</h2>
+    <p class="lead">Dominance decomposed into five pillars, each shown as a within-sport percentile against era peers.</p>
+    <div id="cards" class="cards"></div>
+  </section>
+
+  <!-- peer context -->
+  <section class="panel">
+    <h2>Against their contemporaries</h2>
+    <p class="lead">Composite dominance z-score inside each sport's peer field. The star is highlighted.</p>
+    <div id="peers" class="peers"></div>
+  </section>
+
+  <!-- elegance / quotes -->
+  <section class="panel">
+    <h2>Measuring the sublime</h2>
+    <p class="lead">Elegance is scored from a curated commentary/press corpus: the density of aesthetic language — <i>grace, effortless, sublime, artistry, poetry</i> — per 100 words, scaled to 100.</p>
+    <div id="elegance" class="elegance"></div>
+  </section>
+
+  <!-- methodology -->
+  <section class="panel method">
+    <h2>Methodology & honesty box</h2>
+    <div id="method"></div>
+  </section>
+</main>
+
+<footer>
+  <p>The Pantheon Index · constructed metric, curated data · built on a payload-first vanilla stack.
+  Numbers are curated approximations designed to be swapped for a fuller dataset — the method, not the digits, is the point.</p>
+</footer>
+
+<script src="data/pantheon_data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

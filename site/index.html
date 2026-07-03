@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Pantheon: Measuring Greatness and Grace Across Three Sports</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- navbar -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a class="brand" href="#top">THE&nbsp;PANTHEON</a>
+    <div class="nav-links">
+      <a href="#premise">Report</a>
+      <a href="../dashboard/index.html">Interactive dashboard →</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page" id="top">
+
+  <!-- sticky contents sidebar -->
+  <aside class="toc" id="toc">
+    <h2 class="toc-title">Contents</h2>
+    <nav id="toc-nav"></nav>
+  </aside>
+
+  <!-- article -->
+  <main class="content">
+
+    <header class="title-block">
+      <div class="kicker">Cross-sport analytics · in the backdrop of the FIFA World Cup 2026</div>
+      <h1>The Pantheon: Measuring Greatness and Grace Across Three Sports</h1>
+      <p class="subtitle">Can the sublime be measured? Placing Sachin Tendulkar, Lionel Messi and Roger Federer on one comparable scale — half about dominance, half about beauty.</p>
+      <div class="byline">
+        <span><b>Piyush Zaware</b></span>
+        <span>June 2026</span>
+        <span>Constructed metric · curated data</span>
+      </div>
+    </header>
+
+    <section id="premise">
+      <h2>The premise</h2>
+      <p>Ask a cricket fan for the most <em>elegant</em> batsman and you get Tendulkar. Ask about football and the word "genius" arrives with Messi. Ask about tennis and grace is Federer. These are not only the best in their sport — they are the ones whose greatness looked <em>beautiful</em>. This report asks a deliberately strange question: if three athletes from three unrelated sports share that same rare quality, can we put them on <b>one scale</b> and see it?</p>
+      <p>The honest answer is: partially, and only if we are careful about what "comparable" means. What follows is the careful version.</p>
+      <div class="callout callout-note">
+        <div class="callout-head">The claim, up front</div>
+        <p>All three sit <b>#1 in their own sport</b> on a composite dominance measure. And on the two-axis map they trace an <b>efficient frontier</b>: no merely-great peer is at once more dominant <em>and</em> more elegant. Messi and Tendulkar push the dominance edge; Federer defines the elegance ceiling. They wall off the corner the way a Pareto frontier walls off the good-but-not-great.</p>
+      </div>
+    </section>
+
+    <section id="problem">
+      <h2>The comparison problem</h2>
+      <p>You cannot compare a Test batting average (Tendulkar ≈ 54), goals per ninety minutes (Messi ≈ 1.0+), and a career match-win percentage (Federer ≈ 82%). They share no units, no scale, and no sport. Any ranking that puts these raw numbers side by side is meaningless.</p>
+      <p>The way out is an old idea from evolutionary biologist <b>Stephen Jay Gould</b>, who used it to compare baseball hitters across eras: <em>stop comparing outputs, and compare positions within a distribution.</em> Don't ask "how many runs" — ask <b>"how far above your peers, in standard deviations, were you?"</b> A z-score has no units, so "1.5σ above the field" means the same thing in cricket, football and tennis. That single move is what makes this whole exercise legitimate.</p>
+    </section>
+
+    <section id="data">
+      <h2>The data</h2>
+      <p>The pipeline reads two small, human-curated tables:</p>
+      <ul>
+        <li><code>players.csv</code> — each star plus <b>~8 era peers</b> from the same sport (Lara, Ponting, Kallis, Sangakkara…; Ronaldo, Lewandowski, Mbappé…; Nadal, Djokovic, Sampras…), scored on five pillars.</li>
+        <li><code>commentary_corpus.csv</code> — a curated set of press and commentary lines about each star, used only for the elegance axis.</li>
+      </ul>
+      <p>These numbers are <b>curated approximations</b>, chosen to be representative and honest about magnitude, not scraped to four decimals. The point of the project is the <em>method</em>; because everything reads from CSVs, a fuller dataset drops straight in and every figure below re-computes.</p>
+    </section>
+
+    <section id="methodology">
+      <h2>Methods</h2>
+      <h3 id="the-five-pillars">The five pillars of dominance</h3>
+      <p>For each sport we score every player on five pillars, each "higher is better", then convert each to a z-score against that sport's peer field, then average:</p>
+      <ul>
+        <li><b>Peak</b> — the height of the best window (a peak-era rate stat).</li>
+        <li><b>Longevity</b> — elite years sustained.</li>
+        <li><b>Consistency</b> — the share of seasons spent at an elite level.</li>
+        <li><b>Big-Stage</b> — knockout, World Cup and major-final output.</li>
+        <li><b>Volume</b> — total accumulated output versus peers.</li>
+      </ul>
+      <p>Because the z-score is unitless, the resulting composite — call it <b>Standardized Dominance</b> — is directly comparable across the three sports.</p>
+      <h3 id="the-elegance-lexicon">The elegance lexicon</h3>
+      <p>The second axis is the novel one. Rather than invent an aesthetic stat, we measure <b>how the world writes about them</b>. Every commentary line is scored against a lexicon of grace/beauty words — <em>graceful, effortless, sublime, artistry, poetry, silk, balletic, mesmerising</em> — and we take the density of aesthetic language per hundred words, scaled to 100. It is transparent, reproducible, and — pleasingly — it recovers what fans already feel.</p>
+    </section>
+
+    <section id="dominance">
+      <h2>Results: Standardized Dominance</h2>
+      <p>Each star's composite z-score, shown against their own sport's peer field. In every case the star tops the field — which is the first non-trivial result: three different peer distributions, three winners, all our three.</p>
+      <figure id="fig-peers">
+        <div id="peers" class="peers"></div>
+        <figcaption>Figure 1. Composite dominance (mean z-score across five pillars) within each sport's peer field. The highlighted bar is the Pantheon member.</figcaption>
+      </figure>
+      <p>Decomposing the composite shows <em>how</em> each was great. The radars plot each pillar as a within-sport percentile. Note that greatness has different shapes: Tendulkar's edge is <b>Volume and Longevity</b>; Messi's is a towering <b>Peak</b>; Federer's is <b>Consistency and Longevity</b> across two brutal decades.</p>
+      <figure id="fig-radars">
+        <div id="cards" class="cards"></div>
+        <figcaption>Figure 2. Dominance decomposed. Each spoke is a within-sport percentile against era peers.</figcaption>
+      </figure>
+    </section>
+
+    <section id="elegance">
+      <h2>Measuring the sublime</h2>
+      <p>The elegance axis reads the language, not the play. The strength of the signal is the density of aesthetic words; the words themselves show <em>which</em> flavour of beauty each evoked.</p>
+      <figure id="fig-elegance">
+        <div id="elegance-cards" class="elegance"></div>
+        <figcaption>Figure 3. Elegance index (0–100) with the most frequent aesthetic terms in each corpus.</figcaption>
+      </figure>
+      <p>Federer maxes the scale. This is not an accident of our lexicon — it is the <b>David Foster Wallace effect</b>: no athlete in any sport has attracted as much explicitly aesthetic prose ("Federer as religious experience"). Tendulkar's language leans on <em>timing</em> and <em>wristwork</em>; Messi's on <em>the dribble</em> and <em>the dance</em>. All three score high; that is the whole point.</p>
+      <div class="callout callout-warn">
+        <div class="callout-head">A caveat about the corpus</div>
+        <p>This corpus is <b>curated, not scraped</b>. A genuinely defensible elegance axis would run this lexicon over thousands of match reports; the scorer is built to accept exactly that. Treat Figure 3 as a proof of concept, not a settled measurement.</p>
+      </div>
+    </section>
+
+    <section id="plane">
+      <h2>The Greatness × Elegance plane</h2>
+      <p>Put the two axes together and the argument becomes visible. Every athlete is a point: rightward is more dominant over peers, upward is more elegant in the writing. Era peers appear along the dominance axis for context. The three names we started with trace the <b>efficient frontier</b> (dashed): Federer defines the top, Messi and Tendulkar the right, and no peer lies above and to the right of the line. That frontier — not any single corner — is the real shape of what these three share.</p>
+      <figure id="fig-plane">
+        <div id="plane-fig"></div>
+        <figcaption>Figure 4. The Greatness × Elegance plane. x = standardized dominance (σ above era peers); y = aesthetic-elegance index.</figcaption>
+      </figure>
+    </section>
+
+    <section id="findings">
+      <h2>What we find</h2>
+      <p>Collapsing the plane into a single balanced (50/50) blend gives an ordering — with the strong caveat that the blend is one choice among many:</p>
+      <div id="ranking-table"></div>
+      <p>Read this as: <b>Messi</b> edges the dominance axis (the single highest peak of the three), <b>Tendulkar</b> is a hair behind on a longevity-and-volume argument, and <b>Federer</b> owns the elegance axis so completely that he stays within touching distance despite a peer field — Nadal, Djokovic — as strong as any in sporting history. The interesting result is not the order. It is that <b>three athletes from three sports land in the same tiny region of a plane that measures both how far above everyone they were and how beautiful it looked.</b></p>
+    </section>
+
+    <section id="limits">
+      <h2>Why this is harder to answer than it looks</h2>
+      <p>In the spirit of taking the question seriously, here is what this measurement <em>cannot</em> do:</p>
+      <ul>
+        <li><b>Peer fields are not equally deep.</b> Federer's contemporaries may simply be the strongest peer set in this study, which depresses his dominance z-score relative to a star who dominated a thinner field. The z-score controls for era <em>within</em> a sport, not for how stacked that era was.</li>
+        <li><b>Pillar weights are a judgement call.</b> Averaging the five pillars equally is defensible but arbitrary; a volume-tilted or peak-tilted weighting reshuffles the order.</li>
+        <li><b>The elegance axis measures prose, not play.</b> It captures how beautifully people <em>wrote</em>, which correlates with beauty but also with fame, language and the presence of a great writer at the right moment.</li>
+        <li><b>Three points cannot support a strong blend.</b> The 50/50 "Pantheon score" is a presentational device. The plane is the finding; the leaderboard is a garnish.</li>
+      </ul>
+      <div class="callout callout-note">
+        <div class="callout-head">The honest bottom line</div>
+        <p>This is a constructed metric, not a law of nature. Its value is that it makes a felt intuition — that these three share something — <b>explicit, reproducible, and falsifiable</b>. Swap the data, change the weights, expand the corpus, and watch it move. That is what a good index should let you do.</p>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>Built as a payload-first static site: a Python pipeline (<code>code/A1_build_index.py</code>) reads two CSVs, computes the z-scores and the elegance density, and emits a JSON payload that both this report and a companion <a href="../dashboard/index.html">interactive dashboard</a> render with dependency-free SVG. Method, data and caveats are all in the repository README.</p>
+      <p class="muted">Numbers are curated approximations designed to be swapped for a fuller dataset — the method, not the digits, is the point.</p>
+    </section>
+
+  </main>
+</div>
+
+<script src="data/pantheon_data.js"></script>
+<script src="report.js"></script>
+</body>
+</html>

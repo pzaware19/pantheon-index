@@ -1,0 +1,25 @@
+sport,player,is_star,peak,longevity,consistency,bigstage,volume
+cricket,Sachin Tendulkar,1,58.0,24,0.78,2278,34357
+cricket,Brian Lara,0,57.0,17,0.62,1225,22358
+cricket,Ricky Ponting,0,62.0,17,0.71,1743,27483
+cricket,Jacques Kallis,0,59.0,18,0.74,1148,25534
+cricket,Rahul Dravid,0,60.0,16,0.70,1153,24208
+cricket,Kumar Sangakkara,0,66.0,15,0.68,1532,28016
+cricket,Mahela Jayawardene,0,54.0,17,0.60,1493,25957
+cricket,Younis Khan,0,55.0,17,0.58,617,17851
+football,Lionel Messi,1,1.35,18,0.83,26,838
+football,Cristiano Ronaldo,0,1.28,19,0.80,22,895
+football,Neymar,0,1.05,14,0.62,10,437
+football,Luis Suarez,0,0.98,15,0.60,7,514
+football,Robert Lewandowski,0,1.10,16,0.71,9,650
+football,Karim Benzema,0,0.85,17,0.58,12,435
+football,Kylian Mbappe,0,1.15,9,0.66,15,360
+football,Harry Kane,0,0.92,12,0.55,4,400
+tennis,Roger Federer,1,0.925,20,0.79,20,1251
+tennis,Rafael Nadal,0,0.905,19,0.76,22,1080
+tennis,Novak Djokovic,0,0.905,20,0.82,24,1130
+tennis,Pete Sampras,0,0.870,14,0.66,14,762
+tennis,Andre Agassi,0,0.800,20,0.55,8,870
+tennis,Ivan Lendl,0,0.870,16,0.63,8,1068
+tennis,Bjorn Borg,0,0.900,9,0.70,11,654
+tennis,Andy Murray,0,0.780,15,0.52,3,739
