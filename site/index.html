@@ -99,7 +99,7 @@
 
     <section id="elegance">
       <h2>Measuring the sublime</h2>
-      <p>This axis listens to the language rather than the play. The signal is how thick the aesthetic words get, and the words themselves tell you which kind of beauty each player summoned.</p>
+      <p>Here the score comes from the words, not the play. The more often writers reach for beauty-words about a player, the higher they land. And which words they reach for says a lot about what kind of beautiful each one was.</p>
       <figure id="fig-elegance">
         <div id="elegance-cards" class="elegance"></div>
         <figcaption>Figure 3. Elegance index (0–100) with the most frequent aesthetic terms in each corpus.</figcaption>
@@ -140,12 +140,6 @@
         <div class="callout-head">The honest bottom line</div>
         <p>This is a made-up metric, not a law of nature. What it's good for is turning a gut feeling, that these three share something, into something explicit you can reproduce and argue with. Change the data, move the weights, grow the corpus, and watch it shift. A good index should let you do exactly that.</p>
       </div>
-    </section>
-
-    <section id="about">
-      <h2>About</h2>
-      <p>It's a payload-first static site. A small Python script (<code>code/A1_build_index.py</code>) reads the two CSVs, works out the z-scores and the elegance density, and writes a JSON payload. Both this report and the companion <a href="../dashboard/index.html">interactive dashboard</a> draw everything from that payload with plain SVG and no libraries. The method, data and caveats all live in the repo README.</p>
-      <p class="muted">The numbers are approximations meant to be swapped for a fuller dataset. The method is the part that matters, not the exact digits.</p>
     </section>
 
   </main>
