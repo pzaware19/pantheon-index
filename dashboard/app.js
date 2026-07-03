@@ -1,4 +1,4 @@
-// The Pantheon Index — renderer (vanilla, dependency-free SVG).
+// The Pantheon Index renderer (vanilla, dependency-free SVG).
 (function () {
   const D = window.PANTHEON_DATA;
   const SPORT_COLOR = { cricket: "#33d17a", football: "#4aa8ff", tennis: "#f4c14b" };
@@ -176,20 +176,20 @@
   function method() {
     el("method").innerHTML = `
       <p>${D.meta.method_note}</p>
-      <h4>Axis 1 — Standardized Dominance (the Gould normalization)</h4>
-      <p>Raw output can't cross sports — a batting average, a goals-per-90 and a match-win % share no units. So instead of comparing outputs we compare <b>position within a distribution</b>: for each of five pillars we compute a z-score against a curated set of ~8 era peers in that sport, then average them.</p>
+      <h4>Axis 1: Standardized Dominance (the Gould normalization)</h4>
+      <p>Raw output can't cross sports, because a batting average, a goals-per-90 and a match-win % share no units. So instead of comparing outputs we compare <b>position within a distribution</b>. For each of five pillars we compute a z-score against a curated set of ~8 era peers in that sport, then average them.</p>
       <ul>
-        <li><code>Peak</code> — height of the best window (peak-window rate stat)</li>
-        <li><code>Longevity</code> — elite years sustained</li>
-        <li><code>Consistency</code> — share of seasons at an elite level</li>
-        <li><code>Big-Stage</code> — knockout / World Cup / major-final output</li>
-        <li><code>Volume</code> — accumulated career output vs peers</li>
+        <li><code>Peak</code>: height of the best window (peak-window rate stat)</li>
+        <li><code>Longevity</code>: elite years sustained</li>
+        <li><code>Consistency</code>: share of seasons at an elite level</li>
+        <li><code>Big-Stage</code>: knockout, World Cup and major-final output</li>
+        <li><code>Volume</code>: accumulated career output vs peers</li>
       </ul>
-      <p>Because a z-score is unitless, <b>"1.5σ above your peers" means the same thing in cricket, football and tennis</b> — that is what makes the three comparable.</p>
-      <h4>Axis 2 — Aesthetic Elegance (from language)</h4>
-      <p>The genuinely novel axis. We quantify elegance not from play but from <b>how the world writes about them</b>: a curated commentary/press corpus scored against a ${D.meta.lexicon_size}-word aesthetic lexicon (<i>grace, effortless, sublime, artistry, poetry, silk…</i>). Density of aesthetic language per 100 words, scaled to 100. Federer's max score is the David-Foster-Wallace effect made numeric.</p>
+      <p>Because a z-score is unitless, <b>"1.5σ above your peers" means the same thing in cricket, football and tennis</b>, and that's what makes the three comparable.</p>
+      <h4>Axis 2: Aesthetic Elegance (from language)</h4>
+      <p>This is the fun one. We score elegance not from play but from <b>how the world writes about them</b>: a curated commentary/press corpus checked against a ${D.meta.lexicon_size}-word aesthetic lexicon (<i>grace, effortless, sublime, artistry, poetry, silk…</i>). It's the density of aesthetic language per 100 words, rescaled to 100. Federer topping the scale is the David Foster Wallace effect made numeric.</p>
       <div class="honest">
-        <b>Honesty box.</b> This is a constructed metric, not a law of nature. (1) Player and peer numbers are <b>curated approximations</b> chosen to be representative and swappable — the pipeline reads two CSVs, so real, fuller datasets drop straight in. (2) The commentary corpus is curated, not scraped; it is designed to accept a larger scraped corpus later. (3) The blended "Pantheon score" is one defensible weighting (50/50) of two axes that are genuinely different things — read the <b>plane</b>, not the ranking. The point is the <b>method</b>, and the finding that all three top their own sport while occupying the same rare corner of the greatness–elegance plane.
+        <b>Honesty box.</b> This is a made-up metric, not a law of nature. (1) Player and peer numbers are <b>curated approximations</b>, picked to be representative and easy to swap. The pipeline reads two CSVs, so a fuller dataset drops straight in. (2) The commentary corpus is curated, not scraped, though the scorer is built to take a scraped one. (3) The blended "Pantheon score" is just one defensible 50/50 weighting of two axes that are genuinely different things, so read the <b>plane</b> rather than the ranking. What matters is the <b>method</b>, and the finding that all three top their own sport while sitting in the same rare corner of the greatness and elegance plane.
       </div>`;
   }
 

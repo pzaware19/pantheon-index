@@ -1,4 +1,4 @@
-// The Pantheon — long-form report renderer (vanilla, dependency-free).
+// The Pantheon long-form report renderer (vanilla, dependency-free).
 (function () {
   const D = window.PANTHEON_DATA;
   const SPORT_COLOR = { cricket: "#1a7f4b", football: "#2563eb", tennis: "#c1901c" };
