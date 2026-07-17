@@ -48,6 +48,26 @@ PILLAR_LABELS = {
     "volume": "Volume",
 }
 
+# What each pillar's raw value actually measures, per sport. Used to label the
+# numbers in the head-to-head comparator (raw values only compare within a sport).
+PILLAR_UNITS = {
+    ("cricket", "peak"): "peak Test avg",
+    ("cricket", "longevity"): "elite years",
+    ("cricket", "consistency"): "elite-season share",
+    ("cricket", "bigstage"): "World Cup runs",
+    ("cricket", "volume"): "intl runs",
+    ("football", "peak"): "goal-involv./90",
+    ("football", "longevity"): "elite years",
+    ("football", "consistency"): "elite-season share",
+    ("football", "bigstage"): "major titles",
+    ("football", "volume"): "career goals",
+    ("tennis", "peak"): "peak win rate",
+    ("tennis", "longevity"): "elite years",
+    ("tennis", "consistency"): "elite-season share",
+    ("tennis", "bigstage"): "major slams",
+    ("tennis", "volume"): "career titles",
+}
+
 # Aesthetic lexicon used to score "elegance" from text. Transparent by design:
 # each hit is one occurrence of a grace/beauty/artistry token.
 ELEGANCE_LEXICON = [
@@ -204,6 +224,40 @@ def build():
         p["pantheon_score"] = round(0.5 * dom_100 + 0.5 * p["elegance_index"], 1)
 
     payload["players"].sort(key=lambda x: -x["pantheon_score"])
+
+    # Full roster (stars + peers) with per-pillar stats, for the head-to-head tool.
+    roster = []
+    for sport in sorted({r["sport"] for r in rows}):
+        srows = [r for r in rows if r["sport"] == sport]
+        comp = {r["player"]: stats.mean(r["z"][p] for p in PILLARS) for r in srows}
+        comp_vals = list(comp.values())
+        for r in srows:
+            pillars = []
+            for p in PILLARS:
+                pop = [x[p] for x in srows]
+                pillars.append({
+                    "key": p,
+                    "pillar": PILLAR_LABELS[p],
+                    "unit": PILLAR_UNITS[(sport, p)],
+                    "value": round(r[p], 3),
+                    "z": round(r["z"][p], 2),
+                    "pct": round(percentile_of(r[p], pop), 1),
+                })
+            c = comp[r["player"]]
+            roster.append({
+                "name": r["player"],
+                "sport": sport,
+                "is_star": r["is_star"],
+                "icon": STAR_ICON.get(r["player"], ""),
+                "dominance_z": round(c, 3),
+                "dominance_pct": round(percentile_of(c, comp_vals), 1),
+                "rank_in_sport": sorted(comp_vals, reverse=True).index(c) + 1,
+                "peers_n": len(srows),
+                "elegance_index": (elegance[r["player"]]["elegance_index"]
+                                   if r["player"] in elegance else None),
+                "pillars": pillars,
+            })
+    payload["roster"] = roster
 
     payload["meta"] = {
         "title": "The Pantheon Index",

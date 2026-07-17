@@ -105,3 +105,41 @@ footer p{color:#64748b}
 @media(max-width:820px){
   .podium,.cards,.peers,.elegance{grid-template-columns:1fr}
 }
+
+/* head-to-head */
+.h2h-controls{display:flex;align-items:center;justify-content:center;gap:14px;margin:6px 0 22px;flex-wrap:wrap}
+.h2h-sel{background:#0c1420;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:11px 14px;font-size:15px;font-weight:600;min-width:220px;cursor:pointer;font-family:inherit}
+.h2h-sel:focus{outline:2px solid var(--gold2)}
+.vs{color:var(--mut);font-weight:800;font-size:13px;letter-spacing:.14em}
+.h2h-players{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px}
+.h2h-player{background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.h2h-name{font-weight:800;font-size:18px}
+.h2h-star{color:var(--gold)}
+.h2h-sport{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.12em;margin-top:2px}
+.h2h-badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.h2h-badge{background:#0c1420;border:1px solid var(--line);border-radius:20px;padding:4px 10px;font-size:12px;color:var(--ink)}
+.h2h-badge.dim{color:var(--mut)}
+.h2h-radar-wrap{display:flex;justify-content:center;margin:4px 0 20px}
+.tape{display:flex;flex-direction:column;gap:9px}
+.tape-row{display:grid;grid-template-columns:78px 1fr 110px 1fr 78px;align-items:center;gap:8px}
+.tape-side{display:flex;flex-direction:column}
+.tape-side.left{align-items:flex-end;text-align:right}
+.tape-side.right{align-items:flex-start;text-align:left}
+.tape-num{font-weight:800;font-size:15px;color:var(--mut);font-variant-numeric:tabular-nums}
+.tape-side.win .tape-num{color:var(--ink)}
+.tape-unit{font-size:10px;color:#5f7086;line-height:1.15;margin-top:1px}
+.tape-bar{height:12px;background:#0b1220;border-radius:6px;display:flex;overflow:hidden}
+.tape-bar.l{justify-content:flex-end}
+.tape-bar.r{justify-content:flex-start}
+.tape-bar i{display:block;height:100%;border-radius:6px;opacity:.42}
+.tape-bar i.win{opacity:1}
+.tape-mid{text-align:center;font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+.h2h-note{color:var(--mut);font-size:13px;margin:16px auto 0;text-align:center;max-width:660px;line-height:1.5}
+@media(max-width:820px){
+  .h2h-players{grid-template-columns:1fr}
+  .h2h-sel{min-width:0;flex:1}
+  .tape-row{grid-template-columns:52px 1fr 72px 1fr 52px;gap:5px}
+  .tape-num{font-size:13px}
+  .tape-mid{font-size:9.5px}
+  .tape-unit{display:none}
+}

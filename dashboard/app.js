@@ -193,5 +193,103 @@
       </div>`;
   }
 
-  podium(); plane(); cards(); peers(); elegance(); method();
+  /* ---------- head-to-head ---------- */
+  const A_COL = "#f4c14b", B_COL = "#4aa8ff";
+
+  function fmtVal(v) {
+    return Math.abs(v) >= 1000 ? Math.round(v).toLocaleString() : String(v);
+  }
+
+  function h2hRadar(A, B) {
+    const S = 260, c = S / 2, R = 86;
+    const svg = mk("svg", { viewBox: `0 0 ${S} ${S}`, width: "100%", style: "max-width:300px" });
+    const n = A.pillars.length;
+    const ang = (i) => -Math.PI / 2 + i * 2 * Math.PI / n;
+    [0.25, 0.5, 0.75, 1].forEach((f) => {
+      let pts = "";
+      for (let i = 0; i < n; i++) pts += `${c + Math.cos(ang(i)) * R * f},${c + Math.sin(ang(i)) * R * f} `;
+      svg.appendChild(mk("polygon", { points: pts, fill: "none", stroke: "#243349", "stroke-width": 1 }));
+    });
+    [[A, A_COL], [B, B_COL]].forEach(([P, col]) => {
+      let dp = "";
+      P.pillars.forEach((a, i) => { const f = a.pct / 100; dp += `${c + Math.cos(ang(i)) * R * f},${c + Math.sin(ang(i)) * R * f} `; });
+      svg.appendChild(mk("polygon", { points: dp, fill: col, "fill-opacity": 0.16, stroke: col, "stroke-width": 2 }));
+    });
+    A.pillars.forEach((a, i) => {
+      const lx = c + Math.cos(ang(i)) * (R + 16), ly = c + Math.sin(ang(i)) * (R + 16);
+      svg.appendChild(mk("text", { x: lx, y: ly + 3, "text-anchor": "middle", "font-size": 10, fill: "#8ea3bf" }, a.pillar));
+    });
+    return svg;
+  }
+
+  function h2hCardHTML(p, col) {
+    const eleg = p.elegance_index != null
+      ? `<span class="h2h-badge">Elegance ${p.elegance_index}</span>`
+      : `<span class="h2h-badge dim">no elegance data</span>`;
+    return `<div class="h2h-player" style="border-top:3px solid ${col}">
+      <div class="h2h-name">${p.icon ? p.icon + " " : ""}${p.name}${p.is_star ? ' <span class="h2h-star">★</span>' : ""}</div>
+      <div class="h2h-sport">${p.sport}</div>
+      <div class="h2h-badges">
+        <span class="h2h-badge">Dominance ${p.dominance_z >= 0 ? "+" : ""}${p.dominance_z}σ</span>
+        <span class="h2h-badge">#${p.rank_in_sport} of ${p.peers_n}</span>
+        ${eleg}
+      </div></div>`;
+  }
+
+  function renderH2H(nameA, nameB) {
+    const A = D.roster.find((x) => x.name === nameA);
+    const B = D.roster.find((x) => x.name === nameB);
+    const sameSport = A.sport === B.sport;
+    let rows = "";
+    A.pillars.forEach((pa, i) => {
+      const pb = B.pillars[i];
+      const aWin = pa.pct > pb.pct, bWin = pb.pct > pa.pct;
+      rows += `<div class="tape-row">
+        <div class="tape-side left ${aWin ? "win" : ""}">
+          <span class="tape-num">${fmtVal(pa.value)}</span>
+          <span class="tape-unit">${pa.unit}</span>
+        </div>
+        <div class="tape-bar l"><i class="${aWin ? "win" : ""}" style="width:${pa.pct}%;background:${A_COL}"></i></div>
+        <div class="tape-mid">${pa.pillar}</div>
+        <div class="tape-bar r"><i class="${bWin ? "win" : ""}" style="width:${pb.pct}%;background:${B_COL}"></i></div>
+        <div class="tape-side right ${bWin ? "win" : ""}">
+          <span class="tape-num">${fmtVal(pb.value)}</span>
+          <span class="tape-unit">${pb.unit}</span>
+        </div>
+      </div>`;
+    });
+    const note = sameSport
+      ? "Same sport, so the raw numbers on each side are directly comparable."
+      : "Different sports, so the raw numbers on each side measure different things. The bars use each player's percentile within their own field, which is the part that carries across sports.";
+    el("h2h-out").innerHTML =
+      `<div class="h2h-players">${h2hCardHTML(A, A_COL)}${h2hCardHTML(B, B_COL)}</div>` +
+      `<div class="h2h-radar-wrap"></div>` +
+      `<div class="tape">${rows}</div>` +
+      `<p class="h2h-note">${note}</p>`;
+    el("h2h-out").querySelector(".h2h-radar-wrap").appendChild(h2hRadar(A, B));
+  }
+
+  function headToHead() {
+    const bySport = {};
+    D.roster.forEach((p) => { (bySport[p.sport] = bySport[p.sport] || []).push(p); });
+    const optionsHTML = Object.keys(bySport).sort().map((sp) =>
+      `<optgroup label="${sp}">` +
+      bySport[sp].map((p) => `<option value="${p.name}">${p.icon ? p.icon + " " : ""}${p.name}${p.is_star ? " ★" : ""}</option>`).join("") +
+      `</optgroup>`).join("");
+    el("h2h").innerHTML =
+      `<div class="h2h-controls">
+         <select id="h2h-a" class="h2h-sel">${optionsHTML}</select>
+         <span class="vs">VS</span>
+         <select id="h2h-b" class="h2h-sel">${optionsHTML}</select>
+       </div>
+       <div id="h2h-out"></div>`;
+    const a = el("h2h-a"), b = el("h2h-b");
+    a.value = "Lionel Messi";
+    b.value = "Cristiano Ronaldo";
+    const rr = () => renderH2H(a.value, b.value);
+    a.onchange = rr; b.onchange = rr;
+    rr();
+  }
+
+  podium(); plane(); cards(); peers(); headToHead(); elegance(); method();
 })();

@@ -389,5 +389,1279 @@ window.PANTHEON_DATA = {
     "lexicon_size": 45,
     "method_note": "Dominance is each star's average z-score across five pillars, measured against a curated set of era peers in their own sport (the Gould normalization). The units cancel, so being a certain number of SDs above your peers means the same thing in cricket, football and tennis. Elegance is how densely aesthetic language shows up in a curated commentary corpus, rescaled to 100.",
     "generated_backdrop": "FIFA World Cup 2026"
-  }
+  },
+  "roster": [
+    {
+      "name": "Sachin Tendulkar",
+      "sport": "cricket",
+      "is_star": 1,
+      "icon": "🏏",
+      "dominance_z": 1.538,
+      "dominance_pct": 100.0,
+      "rank_in_sport": 1,
+      "peers_n": 8,
+      "elegance_index": 72.4,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "peak Test avg",
+          "value": 58.0,
+          "z": -0.24,
+          "pct": 50.0
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 24.0,
+          "z": 2.5,
+          "pct": 100.0
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.78,
+          "z": 1.57,
+          "pct": 100.0
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "World Cup runs",
+          "value": 2278.0,
+          "z": 1.92,
+          "pct": 100.0
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "intl runs",
+          "value": 34357.0,
+          "z": 1.94,
+          "pct": 100.0
+        }
+      ]
+    },
+    {
+      "name": "Brian Lara",
+      "sport": "cricket",
+      "is_star": 0,
+      "icon": "",
+      "dominance_z": -0.55,
+      "dominance_pct": 25.0,
+      "rank_in_sport": 7,
+      "peers_n": 8,
+      "elegance_index": null,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "peak Test avg",
+          "value": 57.0,
+          "z": -0.52,
+          "pct": 37.5
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 17.0,
+          "z": -0.25,
+          "pct": 75.0
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.62,
+          "z": -0.85,
+          "pct": 37.5
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "World Cup runs",
+          "value": 1225.0,
+          "z": -0.38,
+          "pct": 50.0
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "intl runs",
+          "value": 22358.0,
+          "z": -0.76,
+          "pct": 25.0
+        }
+      ]
+    },
+    {
+      "name": "Ricky Ponting",
+      "sport": "cricket",
+      "is_star": 0,
+      "icon": "",
+      "dominance_z": 0.455,
+      "dominance_pct": 87.5,
+      "rank_in_sport": 2,
+      "peers_n": 8,
+      "elegance_index": null,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "peak Test avg",
+          "value": 62.0,
+          "z": 0.86,
+          "pct": 87.5
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 17.0,
+          "z": -0.25,
+          "pct": 75.0
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.71,
+          "z": 0.51,
+          "pct": 75.0
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "World Cup runs",
+          "value": 1743.0,
+          "z": 0.75,
+          "pct": 87.5
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "intl runs",
+          "value": 27483.0,
+          "z": 0.4,
+          "pct": 75.0
+        }
+      ]
+    },
+    {
+      "name": "Jacques Kallis",
+      "sport": "cricket",
+      "is_star": 0,
+      "icon": "",
+      "dominance_z": 0.112,
+      "dominance_pct": 62.5,
+      "rank_in_sport": 4,
+      "peers_n": 8,
+      "elegance_index": null,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "peak Test avg",
+          "value": 59.0,
+          "z": 0.03,
+          "pct": 62.5
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 18.0,
+          "z": 0.15,
+          "pct": 87.5
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.74,
+          "z": 0.97,
+          "pct": 87.5
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "World Cup runs",
+          "value": 1148.0,
+          "z": -0.55,
+          "pct": 25.0
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "intl runs",
+          "value": 25534.0,
+          "z": -0.04,
+          "pct": 50.0
+        }
+      ]
+    },
+    {
+      "name": "Rahul Dravid",
+      "sport": "cricket",
+      "is_star": 0,
+      "icon": "",
+      "dominance_z": -0.169,
+      "dominance_pct": 50.0,
+      "rank_in_sport": 5,
+      "peers_n": 8,
+      "elegance_index": null,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "peak Test avg",
+          "value": 60.0,
+          "z": 0.31,
+          "pct": 75.0
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 16.0,
+          "z": -0.64,
+          "pct": 25.0
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.7,
+          "z": 0.36,
+          "pct": 62.5
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "World Cup runs",
+          "value": 1153.0,
+          "z": -0.54,
+          "pct": 37.5
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "intl runs",
+          "value": 24208.0,
+          "z": -0.34,
+          "pct": 37.5
+        }
+      ]
+    },
+    {
+      "name": "Kumar Sangakkara",
+      "sport": "cricket",
+      "is_star": 0,
+      "icon": "",
+      "dominance_z": 0.36,
+      "dominance_pct": 75.0,
+      "rank_in_sport": 3,
+      "peers_n": 8,
+      "elegance_index": null,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "peak Test avg",
+          "value": 66.0,
+          "z": 1.97,
+          "pct": 100.0
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 15.0,
+          "z": -1.03,
+          "pct": 12.5
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.68,
+          "z": 0.06,
+          "pct": 50.0
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "World Cup runs",
+          "value": 1532.0,
+          "z": 0.29,
+          "pct": 75.0
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "intl runs",
+          "value": 28016.0,
+          "z": 0.52,
+          "pct": 87.5
+        }
+      ]
+    },
+    {
+      "name": "Mahela Jayawardene",
+      "sport": "cricket",
+      "is_star": 0,
+      "icon": "",
+      "dominance_z": -0.498,
+      "dominance_pct": 37.5,
+      "rank_in_sport": 6,
+      "peers_n": 8,
+      "elegance_index": null,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "peak Test avg",
+          "value": 54.0,
+          "z": -1.35,
+          "pct": 12.5
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 17.0,
+          "z": -0.25,
+          "pct": 75.0
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.6,
+          "z": -1.16,
+          "pct": 25.0
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "World Cup runs",
+          "value": 1493.0,
+          "z": 0.21,
+          "pct": 62.5
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "intl runs",
+          "value": 25957.0,
+          "z": 0.05,
+          "pct": 62.5
+        }
+      ]
+    },
+    {
+      "name": "Younis Khan",
+      "sport": "cricket",
+      "is_star": 0,
+      "icon": "",
+      "dominance_z": -1.249,
+      "dominance_pct": 12.5,
+      "rank_in_sport": 8,
+      "peers_n": 8,
+      "elegance_index": null,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "peak Test avg",
+          "value": 55.0,
+          "z": -1.07,
+          "pct": 25.0
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 17.0,
+          "z": -0.25,
+          "pct": 75.0
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.58,
+          "z": -1.46,
+          "pct": 12.5
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "World Cup runs",
+          "value": 617.0,
+          "z": -1.7,
+          "pct": 12.5
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "intl runs",
+          "value": 17851.0,
+          "z": -1.77,
+          "pct": 12.5
+        }
+      ]
+    },
+    {
+      "name": "Lionel Messi",
+      "sport": "football",
+      "is_star": 1,
+      "icon": "⚽",
+      "dominance_z": 1.507,
+      "dominance_pct": 100.0,
+      "rank_in_sport": 1,
+      "peers_n": 8,
+      "elegance_index": 78.4,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "goal-involv./90",
+          "value": 1.35,
+          "z": 1.65,
+          "pct": 100.0
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 18.0,
+          "z": 0.97,
+          "pct": 87.5
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.83,
+          "z": 1.68,
+          "pct": 100.0
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "major titles",
+          "value": 26.0,
+          "z": 1.83,
+          "pct": 100.0
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "career goals",
+          "value": 838.0,
+          "z": 1.41,
+          "pct": 87.5
+        }
+      ]
+    },
+    {
+      "name": "Cristiano Ronaldo",
+      "sport": "football",
+      "is_star": 0,
+      "icon": "",
+      "dominance_z": 1.369,
+      "dominance_pct": 87.5,
+      "rank_in_sport": 2,
+      "peers_n": 8,
+      "elegance_index": null,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "goal-involv./90",
+          "value": 1.28,
+          "z": 1.21,
+          "pct": 87.5
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 19.0,
+          "z": 1.3,
+          "pct": 100.0
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.8,
+          "z": 1.36,
+          "pct": 87.5
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "major titles",
+          "value": 22.0,
+          "z": 1.26,
+          "pct": 87.5
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "career goals",
+          "value": 895.0,
+          "z": 1.71,
+          "pct": 100.0
+        }
+      ]
+    },
+    {
+      "name": "Neymar",
+      "sport": "football",
+      "is_star": 0,
+      "icon": "",
+      "dominance_z": -0.433,
+      "dominance_pct": 62.5,
+      "rank_in_sport": 4,
+      "peers_n": 8,
+      "elegance_index": null,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "goal-involv./90",
+          "value": 1.05,
+          "z": -0.22,
+          "pct": 50.0
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 14.0,
+          "z": -0.32,
+          "pct": 37.5
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.62,
+          "z": -0.51,
+          "pct": 50.0
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "major titles",
+          "value": 10.0,
+          "z": -0.44,
+          "pct": 50.0
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "career goals",
+          "value": 437.0,
+          "z": -0.67,
+          "pct": 50.0
+        }
+      ]
+    },
+    {
+      "name": "Luis Suarez",
+      "sport": "football",
+      "is_star": 0,
+      "icon": "",
+      "dominance_z": -0.501,
+      "dominance_pct": 37.5,
+      "rank_in_sport": 6,
+      "peers_n": 8,
+      "elegance_index": null,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "goal-involv./90",
+          "value": 0.98,
+          "z": -0.65,
+          "pct": 37.5
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 15.0,
+          "z": 0.0,
+          "pct": 50.0
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.6,
+          "z": -0.71,
+          "pct": 37.5
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "major titles",
+          "value": 7.0,
+          "z": -0.87,
+          "pct": 25.0
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "career goals",
+          "value": 514.0,
+          "z": -0.27,
+          "pct": 62.5
+        }
+      ]
+    },
+    {
+      "name": "Robert Lewandowski",
+      "sport": "football",
+      "is_star": 0,
+      "icon": "",
+      "dominance_z": 0.139,
+      "dominance_pct": 75.0,
+      "rank_in_sport": 3,
+      "peers_n": 8,
+      "elegance_index": null,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "goal-involv./90",
+          "value": 1.1,
+          "z": 0.09,
+          "pct": 62.5
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 16.0,
+          "z": 0.32,
+          "pct": 62.5
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.71,
+          "z": 0.43,
+          "pct": 75.0
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "major titles",
+          "value": 9.0,
+          "z": -0.59,
+          "pct": 37.5
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "career goals",
+          "value": 650.0,
+          "z": 0.44,
+          "pct": 75.0
+        }
+      ]
+    },
+    {
+      "name": "Karim Benzema",
+      "sport": "football",
+      "is_star": 0,
+      "icon": "",
+      "dominance_z": -0.515,
+      "dominance_pct": 25.0,
+      "rank_in_sport": 7,
+      "peers_n": 8,
+      "elegance_index": null,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "goal-involv./90",
+          "value": 0.85,
+          "z": -1.46,
+          "pct": 12.5
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 17.0,
+          "z": 0.65,
+          "pct": 75.0
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.58,
+          "z": -0.92,
+          "pct": 25.0
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "major titles",
+          "value": 12.0,
+          "z": -0.16,
+          "pct": 62.5
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "career goals",
+          "value": 435.0,
+          "z": -0.68,
+          "pct": 37.5
+        }
+      ]
+    },
+    {
+      "name": "Kylian Mbappe",
+      "sport": "football",
+      "is_star": 0,
+      "icon": "",
+      "dominance_z": -0.488,
+      "dominance_pct": 50.0,
+      "rank_in_sport": 5,
+      "peers_n": 8,
+      "elegance_index": null,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "goal-involv./90",
+          "value": 1.15,
+          "z": 0.4,
+          "pct": 75.0
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 9.0,
+          "z": -1.95,
+          "pct": 12.5
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.66,
+          "z": -0.09,
+          "pct": 62.5
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "major titles",
+          "value": 15.0,
+          "z": 0.27,
+          "pct": 75.0
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "career goals",
+          "value": 360.0,
+          "z": -1.07,
+          "pct": 12.5
+        }
+      ]
+    },
+    {
+      "name": "Harry Kane",
+      "sport": "football",
+      "is_star": 0,
+      "icon": "",
+      "dominance_z": -1.078,
+      "dominance_pct": 12.5,
+      "rank_in_sport": 8,
+      "peers_n": 8,
+      "elegance_index": null,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "goal-involv./90",
+          "value": 0.92,
+          "z": -1.02,
+          "pct": 25.0
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 12.0,
+          "z": -0.97,
+          "pct": 25.0
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.55,
+          "z": -1.23,
+          "pct": 12.5
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "major titles",
+          "value": 4.0,
+          "z": -1.3,
+          "pct": 12.5
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "career goals",
+          "value": 400.0,
+          "z": -0.86,
+          "pct": 25.0
+        }
+      ]
+    },
+    {
+      "name": "Roger Federer",
+      "sport": "tennis",
+      "is_star": 1,
+      "icon": "🎾",
+      "dominance_z": 1.107,
+      "dominance_pct": 100.0,
+      "rank_in_sport": 1,
+      "peers_n": 8,
+      "elegance_index": 100.0,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "peak win rate",
+          "value": 0.925,
+          "z": 1.13,
+          "pct": 100.0
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 20.0,
+          "z": 0.92,
+          "pct": 100.0
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.79,
+          "z": 1.09,
+          "pct": 87.5
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "major slams",
+          "value": 20.0,
+          "z": 0.88,
+          "pct": 75.0
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "career titles",
+          "value": 1251.0,
+          "z": 1.52,
+          "pct": 100.0
+        }
+      ]
+    },
+    {
+      "name": "Rafael Nadal",
+      "sport": "tennis",
+      "is_star": 0,
+      "icon": "",
+      "dominance_z": 0.8,
+      "dominance_pct": 75.0,
+      "rank_in_sport": 3,
+      "peers_n": 8,
+      "elegance_index": null,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "peak win rate",
+          "value": 0.905,
+          "z": 0.72,
+          "pct": 87.5
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 19.0,
+          "z": 0.65,
+          "pct": 62.5
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.76,
+          "z": 0.79,
+          "pct": 75.0
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "major slams",
+          "value": 22.0,
+          "z": 1.16,
+          "pct": 87.5
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "career titles",
+          "value": 1080.0,
+          "z": 0.67,
+          "pct": 75.0
+        }
+      ]
+    },
+    {
+      "name": "Novak Djokovic",
+      "sport": "tennis",
+      "is_star": 0,
+      "icon": "",
+      "dominance_z": 1.077,
+      "dominance_pct": 87.5,
+      "rank_in_sport": 2,
+      "peers_n": 8,
+      "elegance_index": null,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "peak win rate",
+          "value": 0.905,
+          "z": 0.72,
+          "pct": 87.5
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 20.0,
+          "z": 0.92,
+          "pct": 100.0
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.82,
+          "z": 1.38,
+          "pct": 100.0
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "major slams",
+          "value": 24.0,
+          "z": 1.45,
+          "pct": 100.0
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "career titles",
+          "value": 1130.0,
+          "z": 0.92,
+          "pct": 87.5
+        }
+      ]
+    },
+    {
+      "name": "Pete Sampras",
+      "sport": "tennis",
+      "is_star": 0,
+      "icon": "",
+      "dominance_z": -0.35,
+      "dominance_pct": 50.0,
+      "rank_in_sport": 5,
+      "peers_n": 8,
+      "elegance_index": null,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "peak win rate",
+          "value": 0.87,
+          "z": 0.01,
+          "pct": 50.0
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 14.0,
+          "z": -0.71,
+          "pct": 25.0
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.66,
+          "z": -0.18,
+          "pct": 50.0
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "major slams",
+          "value": 14.0,
+          "z": 0.04,
+          "pct": 62.5
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "career titles",
+          "value": 762.0,
+          "z": -0.9,
+          "pct": 37.5
+        }
+      ]
+    },
+    {
+      "name": "Andre Agassi",
+      "sport": "tennis",
+      "is_star": 0,
+      "icon": "",
+      "dominance_z": -0.585,
+      "dominance_pct": 37.5,
+      "rank_in_sport": 6,
+      "peers_n": 8,
+      "elegance_index": null,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "peak win rate",
+          "value": 0.8,
+          "z": -1.41,
+          "pct": 25.0
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 20.0,
+          "z": 0.92,
+          "pct": 100.0
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.55,
+          "z": -1.26,
+          "pct": 25.0
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "major slams",
+          "value": 8.0,
+          "z": -0.81,
+          "pct": 37.5
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "career titles",
+          "value": 870.0,
+          "z": -0.37,
+          "pct": 50.0
+        }
+      ]
+    },
+    {
+      "name": "Ivan Lendl",
+      "sport": "tennis",
+      "is_star": 0,
+      "icon": "",
+      "dominance_z": -0.167,
+      "dominance_pct": 62.5,
+      "rank_in_sport": 4,
+      "peers_n": 8,
+      "elegance_index": null,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "peak win rate",
+          "value": 0.87,
+          "z": 0.01,
+          "pct": 50.0
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 16.0,
+          "z": -0.17,
+          "pct": 50.0
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.63,
+          "z": -0.48,
+          "pct": 37.5
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "major slams",
+          "value": 8.0,
+          "z": -0.81,
+          "pct": 37.5
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "career titles",
+          "value": 1068.0,
+          "z": 0.61,
+          "pct": 62.5
+        }
+      ]
+    },
+    {
+      "name": "Bjorn Borg",
+      "sport": "tennis",
+      "is_star": 0,
+      "icon": "",
+      "dominance_z": -0.614,
+      "dominance_pct": 25.0,
+      "rank_in_sport": 7,
+      "peers_n": 8,
+      "elegance_index": null,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "peak win rate",
+          "value": 0.9,
+          "z": 0.62,
+          "pct": 62.5
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 9.0,
+          "z": -2.08,
+          "pct": 12.5
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.7,
+          "z": 0.21,
+          "pct": 62.5
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "major slams",
+          "value": 11.0,
+          "z": -0.39,
+          "pct": 50.0
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "career titles",
+          "value": 654.0,
+          "z": -1.43,
+          "pct": 12.5
+        }
+      ]
+    },
+    {
+      "name": "Andy Murray",
+      "sport": "tennis",
+      "is_star": 0,
+      "icon": "",
+      "dominance_z": -1.268,
+      "dominance_pct": 12.5,
+      "rank_in_sport": 8,
+      "peers_n": 8,
+      "elegance_index": null,
+      "pillars": [
+        {
+          "key": "peak",
+          "pillar": "Peak",
+          "unit": "peak win rate",
+          "value": 0.78,
+          "z": -1.82,
+          "pct": 12.5
+        },
+        {
+          "key": "longevity",
+          "pillar": "Longevity",
+          "unit": "elite years",
+          "value": 15.0,
+          "z": -0.44,
+          "pct": 37.5
+        },
+        {
+          "key": "consistency",
+          "pillar": "Consistency",
+          "unit": "elite-season share",
+          "value": 0.52,
+          "z": -1.55,
+          "pct": 12.5
+        },
+        {
+          "key": "bigstage",
+          "pillar": "Big-Stage",
+          "unit": "major slams",
+          "value": 3.0,
+          "z": -1.52,
+          "pct": 12.5
+        },
+        {
+          "key": "volume",
+          "pillar": "Volume",
+          "unit": "career titles",
+          "value": 739.0,
+          "z": -1.01,
+          "pct": 25.0
+        }
+      ]
+    }
+  ]
 };
